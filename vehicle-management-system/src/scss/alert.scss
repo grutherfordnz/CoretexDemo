@@ -1,0 +1,21 @@
+.alert-bar {
+  color: colour(white);
+  font-size: font-size(xs);
+  font-weight: bold;
+  left: 0;
+  padding: size(xs);
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 9;
+}
+
+.alert-bar--success {
+  @extend .alert-bar;
+  background-color: colour(greenhover);
+}
+
+.alert-bar--fail {
+  @extend .alert-bar;
+  background-color: colour(red);
+}

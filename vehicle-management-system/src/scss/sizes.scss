@@ -1,0 +1,52 @@
+$sizes-map: ( no: 0, xxs: 4px, xs: 8px, s: 16px, m: 25px, l: 40px, xl: 60px, xxl: 80px );
+
+
+@each $key, $val in $sizes-map {
+    .#{$key}-top-pad {
+        padding-top: $val;
+    }
+
+    .#{$key}-bottom-pad {
+        padding-bottom: $val;
+    }
+
+    .#{$key}-top-margin {
+        margin-top: $val;
+    }
+
+    .#{$key}-bottom-margin {
+        margin-bottom: $val;
+    }
+
+    .#{$key}-left-margin {
+		margin-left: $val;
+	}
+
+	.#{$key}-right-margin {
+		margin-right: $val;
+	}
+
+	.#{$key}-left-pad {
+		padding-left: $val;
+	}
+
+	.#{$key}-right-pad {
+		padding-right: $val;
+    }
+    
+    .#{$key}-pad {
+		padding: $val;
+    }
+    
+    .#{$key}-margin {
+		margin: $val;
+	}
+}
+
+@function size($size) {
+    @if map-has-key($sizes-map, $size) {
+        @return map-get($sizes-map, $size);
+    }
+
+    @warn "Size (#{$size}) not found!";
+}

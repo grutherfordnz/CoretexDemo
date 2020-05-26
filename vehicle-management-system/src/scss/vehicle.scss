@@ -1,0 +1,44 @@
+.vehicle-table {
+  width: 100%;
+
+  &__row {
+    align-items: center;
+    background: colour(white);
+    border-radius: size(xxs);
+    display: flex;
+    height: size(xxl);
+    margin: size(xxs) size(no);
+    padding: size(no) size(s);
+
+    &--header {
+      font-weight: bold;
+      margin-top: size(no);
+    }    
+  }
+
+  &__column {
+    display: inline-block;
+    overflow: hidden;
+    padding: size(no) size(xs);
+    text-overflow: ellipsis;
+    vertical-align: middle;
+  }
+}
+
+
+.vehicle-view {
+  min-height: 100%;
+
+  .vehicle-view-box {
+    background-color: colour(white);
+    border-radius: size(s);
+    margin-bottom: size(l);
+    overflow-y: auto;
+    padding: size(m) size(m) size(l) size(m);
+}
+
+  &__centered-set-width {
+    margin: 0 auto;
+    width: 616px;
+  }  
+}

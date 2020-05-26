@@ -1,0 +1,65 @@
+#home-page {
+  background-color: colour(gray1);
+  min-height: 100%;
+}
+
+.home-page-header {
+  background-color: colour(white);
+  padding: size(l) size(no) size(m);
+  height: 80px;
+
+  &--right {
+    @extend .no-right-pad;
+
+    display: flex;
+    justify-content: flex-end;
+  }  
+}
+
+.home-page-container {
+  margin: size(m) size(s);
+}
+
+input {        
+  background-color: colour(white);
+  border: 1px solid colour(gray3);
+  border-radius: size(xxs);
+  box-sizing: content-box;
+  display:flex;
+  flex-direction:row;
+  height: size(l);
+  width: 100%;
+}
+
+.full-size-form {
+  float: left;
+  width: 100%;
+}
+
+.half-size-form {
+  float: left;
+  width: 50%;
+}
+
+.control__label {
+  color: colour(gray5);
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: size(xs);
+  max-width: 100%;
+}
+
+.control-has-error {
+  border-color: colour(red);
+  &:focus {
+    border-color: color(red);
+  }    
+}  
+
+.form-group {
+  margin-bottom: size(m);
+}
+
+.display-flex {
+  display: flex;
+}

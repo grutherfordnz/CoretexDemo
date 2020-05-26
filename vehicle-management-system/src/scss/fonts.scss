@@ -1,0 +1,51 @@
+$font-size-list : (
+    xxs  : 10px,
+    xs   : 12px,
+    s    : 14px,
+    m    : 16px,
+    l    : 18px,
+    xl   : 24px,
+    xxl  : 36px,
+    huge : 48px
+);
+
+@function font-size($size){
+	@if map-has-key($font-size-list, $size){
+        @return map-get($font-size-list, $size);
+	}
+
+	@warn "Size (#{$size}) not found!";
+}
+
+.title {
+  font-size: font-size(huge); // 48px
+  font-weight: bold;
+  color: colour(gray5);
+}
+
+.title-medium {
+  font-size: font-size(xl);
+  font-weight: bold;  
+  color: colour(gray5);  
+}
+
+.title-medium--light {
+  font-size: font-size(xl);
+  font-weight: normal;
+  color: colour(gray5);  
+}
+
+.a-blue {
+  color: colour(blue);
+
+  &:hover, &:focus {
+      color: colour(bluehover);
+      text-decoration: underline;
+  }
+
+  &--disabled {
+      color: colour(gray3);
+      pointer-events: none;
+      text-decoration: none;
+  }
+}

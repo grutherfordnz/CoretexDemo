@@ -1,0 +1,33 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/vehicle-management-system/node_modules
+/vehicle-management-system/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Bb]in/
+[Oo]bj/
+# build folder is nowadays used for build scripts and should not be ignored
+#build/
+
+.vs
+.nupkg
+**/packages/*
+!**/packages/build/
+
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+*.cache
+*.dll
+*.exe
+*.pdb

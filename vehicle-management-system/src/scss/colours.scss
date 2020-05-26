@@ -1,0 +1,27 @@
+$colour-pallet: (
+    blue: #00ACCA,
+    bluedark: #0F3D4A,
+    bluedarkhover: #00272D,
+    bluehover: #0097B1,
+    green: #75B200,
+    greenhover: #689E00,
+    gray1: #F5F5F5,
+    gray2: #E0E0E0,
+    gray3: #BCBCBC,
+    gray4: #727272,
+    gray5: #444444,
+    lightblue: #BFE4E3,
+    orange:	#EB9D06,
+    pink: #E49BB1,
+    red: #AA2314,
+    redhover: #89130A,
+    white: #FFFFFF
+);
+
+@function colour($colour) {
+  @if map-has-key($colour-pallet, $colour) {
+      @return map-get($colour-pallet, $colour);
+  }
+
+  @warn "Colour (#{$colour}) not found!";
+}
